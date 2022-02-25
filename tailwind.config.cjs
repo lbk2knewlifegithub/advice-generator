@@ -15,6 +15,7 @@ const config = {
 		},
 		boxShadow: {
 			'3xl': '0 0px 60px hsl(150, 100%, 66%)',
+			'4xl': '0 0px 60px rgba(0, 0, 0, 0.5)',
 		},
 		extend: {
 			fontFamily: {

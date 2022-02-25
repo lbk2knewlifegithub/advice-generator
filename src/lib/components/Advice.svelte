@@ -22,7 +22,7 @@
 </script>
 
 <div
-	class="tada rounded-lg p-6 pb-16 bg-blue-50 text-center relative max-w-md md:p-12 md:pb-20  {customClass}"
+	class="tada rounded-xl p-6 pb-16 bg-blue text-center relative max-w-md md:p-12 md:pb-20  {customClass} shadow-4xl"
 >
 	<!-- Advice Id -->
 	<span class="text-cyan-50 font-bold uppercase">
