@@ -25,7 +25,7 @@
 	class="tada rounded-xl p-6 pb-16 bg-blue text-center relative max-w-md md:p-12 md:pb-20  {customClass} shadow-4xl"
 >
 	<!-- Advice Id -->
-	<span class="text-cyan-50 font-bold uppercase">
+	<span class="text-cyan-50 uppercase text-sm font-bold">
 		<span class="mr-1 inline-block"> ADVICE </span>
 		# {advice.id}</span
 	>
@@ -35,7 +35,7 @@
 	{#key advice.content}
 		<div class="min-h-[2rem] duraion-500">
 			<Typewriter>
-				<h1 class="text-white text-2xl mt-6">
+				<h1 class="text-white text-2xl mt-6 font-black">
 					{formattedContent}
 				</h1>
 			</Typewriter>
