@@ -1,20 +1,23 @@
-import type { Advice } from "$lib/models";
+import type { Advice } from '$lib/models';
+import { adviceService } from '$lib/services/advice.service';
+
+let cached: Advice[] = [];
 
 /**
 * @type {import('@sveltejs/kit').RequestHandler}
 */
-export const get = async () => {
-    //   const res = await something;
-
-    const advice: Advice = {
-        id: 117,
-        content: "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
+export const get = async (): Promise<{ body: { advice: Advice } }> => {
+    if (cached.length > 20) {
+        const index = Math.floor(Math.random() * cached.length);
+        return { body: { advice: cached[index] } };
     }
-    // if (res) {
+
+    const advice = (await adviceService.randomAdvice()) as Advice;
+    cached.push(advice);
+
     return {
         body: {
             advice
         }
     };
-    // }
 }

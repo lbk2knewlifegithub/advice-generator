@@ -1,29 +1,20 @@
 <script lang="ts">
-	// Imports
+	// Import
+	import AdviceComponent from '$lib/components/Advice.svelte';
 	import type { Advice } from '$lib/models';
+	import { adviceStore } from '$lib/store/advice.store';
+	import { onMount } from 'svelte';
 
 	// Exports
 	export let advice: Advice;
+
+	onMount(() => {
+		adviceStore.setAdvice(advice);
+	});
 </script>
 
-<svelte:head>
-	<title>Advice Generator</title>
-</svelte:head>
-
-<main class="container">
-	<div class="rounded-lg p-10 bg-blue text-center">
-		<!-- Advice Id -->
-		<span class="text-cyan-50 font-bold uppercase">ADVICE #{advice.id}</span>
-		<!-- end Advice Id -->
-
-		<!-- Advice Content -->
-		<h1 class="text-white text-lg mt-6">
-			"{advice.content}"
-		</h1>
-		<!-- end Advice Content -->
-
-		<!-- Line -->
-        <img src="/images/pattern-line-mobile.svg" alt="Pattern Mobile">
-		<!-- end Line -->
-	</div>
+<main class="container mt-32 sm:mt-40 md:mt-56 lg:mt-0 lg:h-screen lg:grid lg:place-content-center">
+	{#if $adviceStore.advice}
+		<AdviceComponent loading={$adviceStore.loading} advice={$adviceStore.advice} class="mx-auto" />
+	{/if}
 </main>

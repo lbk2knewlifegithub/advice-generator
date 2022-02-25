@@ -13,6 +13,9 @@ const config = {
 				xl: "8rem",
 			},
 		},
+		boxShadow: {
+			'3xl': '0 0px 60px hsl(150, 100%, 66%)',
+		},
 		extend: {
 			fontFamily: {
 				'mono': ['', ...defaultTheme.fontFamily.sans],
