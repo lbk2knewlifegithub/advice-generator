@@ -4,7 +4,7 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ### Links
 
-- [Solution URL](https://advice-generator-5s9h06elq-lbk2knewlifegithub.vercel.app/)
+- [Solution URL](https://github.com/lbk2knewlifegithub/advice-generator)
 - [Live Site URL](https://advice-generator-5s9h06elq-lbk2knewlifegithub.vercel.app/)
 
 ## My process
